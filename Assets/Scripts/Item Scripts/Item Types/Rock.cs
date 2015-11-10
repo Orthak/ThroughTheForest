@@ -18,6 +18,6 @@ public class Rock : Item
 	/// </summary>
 	void Start()
 	{
-		rigidbody.AddForce((throwBox.transform.forward) * 30f, ForceMode.Impulse);
+		GetComponent<Rigidbody>().AddForce((throwBox.transform.forward) * 30f, ForceMode.Impulse);
 	}
 }

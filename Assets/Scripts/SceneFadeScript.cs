@@ -18,10 +18,10 @@ public class SceneFadeScript : MonoBehaviour
     {
         for (float a = 0f; a <= 1f; a += .1f)
         {
-            Color changeColor = renderer.material.color;
+            Color changeColor = GetComponent<Renderer>().material.color;
             changeColor.a = a;
-            renderer.material.color = changeColor;
-            Debug.Log(renderer.material.color.a.ToString());
+            GetComponent<Renderer>().material.color = changeColor;
+            Debug.Log(GetComponent<Renderer>().material.color.a.ToString());
             if (a >= 1f)
                 break;
 

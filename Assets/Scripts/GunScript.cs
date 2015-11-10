@@ -17,7 +17,7 @@ public class GunScript : MonoBehaviour
 	{
 		var bulletInstance = Instantiate(bullet, barrel.transform.position, barrel.transform.rotation)
 			as GameObject;
-		bulletInstance.rigidbody.AddForce(bulletInstance.transform.forward * speed,
+		bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * speed,
 										  ForceMode.Impulse);
 	}
 }
